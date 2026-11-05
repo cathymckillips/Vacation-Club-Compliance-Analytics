@@ -1,0 +1,14 @@
+-- Create measures in Power BI. Set relationships using the model guide.
+Total Members = DISTINCTCOUNT(DimMember[MemberID])
+Total Reservations = COUNTROWS(FactReservation)
+Total Alerts = COUNTROWS(FactComplianceAlert)
+Flagged Members = DISTINCTCOUNT(FactComplianceAlert[MemberID])
+Flagged Member Rate = DIVIDE([Flagged Members], [Total Members])
+Open Cases = CALCULATE(COUNTROWS(FactInvestigation), FactInvestigation[CaseStatus] = "Open")
+Closed Cases = CALCULATE(COUNTROWS(FactInvestigation), FactInvestigation[CaseStatus] = "Closed")
+Confirmed Violations = CALCULATE(COUNTROWS(FactInvestigation), FactInvestigation[Disposition] = "Confirmed Violation")
+Confirmed Violation Rate = DIVIDE([Confirmed Violations], [Closed Cases])
+Overdue Open Cases = CALCULATE(COUNTROWS(FactInvestigation), FactInvestigation[CaseStatus] = "Open", FactInvestigation[DueDate] < DATE(2026,10,31))
+Average Closure Days = AVERAGEX(FILTER(FactInvestigation, NOT ISBLANK(FactInvestigation[CloseDate])), DATEDIFF(FactInvestigation[OpenDate], FactInvestigation[CloseDate], DAY))
+Unapproved Adjustment Rate = DIVIDE(SUM(vw_ControlMonitoring[UnapprovedCount]), SUM(vw_ControlMonitoring[AdjustmentCount]))
+-- Snapshot date is fixed to the synthetic data. Replace with a selected as-of date for production designs.
