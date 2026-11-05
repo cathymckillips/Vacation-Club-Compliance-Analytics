@@ -62,18 +62,22 @@ Six rules were implemented in SQL. The following counts are from the project's i
 ### 1. Executive Compliance Overview
 
 Summarizes compliance alerts, affected members, investigation workload, and high-level risk indicators.
+![Executive Overview Dashboard](06_images/Page_1.png)
 
 ### 2. Booking Behavior & Member Risk
 
 Analyzes reservation patterns, cancellations, booking activity, and booking-related compliance alerts.
+![Executive Overview Dashboard](06_images/Page_2.png)
 
 ### 3. Points Integrity & Reconciliation
 
 Examines points credits, debits, net ledger activity, negative balances, and unapproved adjustments. The synthetic reservation and points datasets are not guaranteed to reconcile transaction-for-transaction; exceptions are therefore treated as analytical signals, not proof of wrongdoing.
+![Executive Overview Dashboard](06_images/Page_3.png)
 
 ### 4. Investigation & Case Management
 
 Tracks investigation status, assigned teams, recorded dispositions, risk-level prioritization, and a case review queue.
+![Executive Overview Dashboard](06_images/Page_4.png)
 
 ## Analytical workflow
 
@@ -94,8 +98,7 @@ Vacation-Club-Compliance-Analytics/
 ├── 03_sql/              # Schema, validation, detection, and reporting SQL
 ├── 04_powerbi/          # Power BI model notes and report assets
 ├── 05_documentation/    # Build guide, rule catalog, and SOPs
-├── 06_outputs/          # Final report and screenshots (as applicable)
-└── README.md
+├── 06_images/           # Screenshots 
 ```
 
 ## How to reproduce
