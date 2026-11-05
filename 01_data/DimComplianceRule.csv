@@ -1,0 +1,7 @@
+RuleID,RuleName,RuleDescription,Severity,ThresholdValue
+CR001,High booking frequency,More than 8 confirmed/completed bookings in rolling 30 days,Medium,8
+CR002,High cancellation rate,At least 5 bookings and >40% canceled in rolling 90 days,Medium,40
+CR003,Negative points balance,Net points ledger balance below zero,High,0
+CR004,Shared third-party guest,Same shared guest token booked by 3+ distinct accounts,Review,3
+CR005,Unapproved large adjustment,Unapproved positive points adjustment >10000,High,10000
+CR006,Unapproved account override,Contact center account override lacking approval,High,0
