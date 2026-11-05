@@ -114,16 +114,6 @@ Vacation-Club-Compliance-Analytics/
 
 > Before rerunning alert-insertion scripts, check whether they are idempotent or whether existing alerts need to be cleared. Repeated inserts may duplicate results.
 
-## Screenshots
-
-Add screenshots of completed report pages to an `assets/` folder and update the links below:
-
-- Executive Compliance Overview — screenshot pending
-- Booking Behavior & Member Risk — screenshot pending
-- Points Integrity & Reconciliation — screenshot pending
-- Investigation & Case Management — screenshot pending
-- Control Effectiveness & Compliance Trends — screenshot pending
-
 ## Skills demonstrated
 
 - Data quality assessment and SQL-based validation
